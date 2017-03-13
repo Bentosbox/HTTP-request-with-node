@@ -21,10 +21,14 @@ module.exports = function getHTML (options, callback) {
       printHTML(str);
       // console.log(str);
     });
+
+    response.on('end', function() {
+    printHTML(str);
+  });
   });
 
   function printHTML (html) {
-    console.log(html);
+    callback(html);
   }
 };
 

@@ -28,6 +28,7 @@ function getHTML (options, callback) {
   function printHTML (html) {
     console.log(html);
   }
+    // callback(html)
 }
 
 var requestOptions = {

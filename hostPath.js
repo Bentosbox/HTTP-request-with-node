@@ -16,16 +16,16 @@ var requestOptions = {
   // the callback is invoked when a `data` chunk is received
   var response = response.on('data', function (data) {
     str += data;
-    console.log(str);
+    // console.log(str);
   });
 
   // the callback is invoked when all of the data has been received
   // (the `end` of the stream)
-  // response.on('end', function() {
-  //   console.log('Response stream complete.');
+  response.on('end', function() {
+    console.log(str);
   });
   // console.log(str);
-
+});
 }
 
 var requestOptions = {
